@@ -1,5 +1,5 @@
-// let  nombreUsuario = prompt ("ingresar nombre"); 
-// let  nombreIngresado = prompt ("Bienvenido a Cartagena Showrrom " +nombreUsuario+ " dejanos tu mail para recibir el newsletter " );
+let  nombreUsuario = prompt ("ingresar nombre"); 
+let  nombreIngresado = prompt ("Bienvenido a Cartagena Showrrom " +nombreUsuario+ " dejanos tu mail para recibir el newsletter " );
 
 let products = [];
 let total = 0;
