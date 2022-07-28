@@ -1,0 +1,104 @@
+* {
+    padding: 0;
+    margin: 0;
+box-sizing: border-box;
+}
+
+body { background-color:black;
+    margin: auto;
+
+}
+
+header {
+    background-color: rgb(171, 171, 214);
+    padding: 50px;
+    font-size: 20px;
+    justify-content: space-between;
+
+}
+.titulo {
+    font-size: 30px;
+    color: black;
+    outline: none;
+    text-decoration: none;
+    text-align: start;
+    margin-right: 20px;
+}
+
+
+aside {
+    margin-top: 10px;
+    margin-bottom: 5px;
+   
+    background-image: url(https://www.caracteristicas.co/wp-content/uploads/2019/03/deporte-5-e1587429352484.jpg);
+}
+
+.product-container {
+    margin: 15px;
+    padding: 2px 16px;
+    position: relative;
+}
+
+button {
+    font-size: 16px;
+    text-align: center;
+    border-style: hidden;
+    border-radius: 8px;
+    padding: 10px 20px;
+}
+
+
+.product-container:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.356);
+}
+
+.product-container img {
+   
+    width: 300px;
+    
+}
+
+.page-content {
+    border: 1px solid rgba(92, 32, 92, 0.877);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+}
+
+.button-add {
+
+    transition-duration: 0.4s;
+    text-align: center;
+    border: none;
+    background-color: white;
+    color: black;
+    border: 2px solid rgb(64, 28, 94);
+    position: absolute;
+    right: 15px;
+    bottom: 10px;
+
+}
+
+.button-add:hover {
+    background-color: #493e64;
+    color: white;
+}
+
+.button-checkout {
+
+    transition-duration: 0.4s;
+    border: none;
+    background-color: white;
+    color: black;
+    border: 2px solid rgb(41, 11, 110);
+    position: relative;
+    margin-left: 5px;
+    bottom: 5px;
+
+}
+
+.button-checkout:hover {
+    background-color: rgb(63, 63, 133);
+    color: white;
+}
