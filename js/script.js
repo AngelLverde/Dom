@@ -1,8 +1,16 @@
 // let nombreIngresado = prompt ("ingresa tu nombre");
 // let ingresarMail = prompt ("Bienvenido a Cartagena "+nombreIngresado+" dejanos tu mail para recibir el newsletter");
+  
+// If ternario , nos indica que va a ocurrir en caso de cumplir o no con el requisito de ingreso// 
+let edad = 15;
+let login = "esta logueado";
 
-//--------- GUARDAR EN LOCALSTORAGE------------//
-const elementosCarrito = JSON.parse (localStorage.getItem("products")) ?? [];
+(edad >= 15 ) && (login == "esta logueado")? console.log ("puede inresar al sitio") : console.log ("No puede ingresar al sitio");
+
+
+
+//--------- guardar en localStorage------------//
+const elementosCarrito = JSON.parse (localStorage.getItem("products")) ||[];
 
 
 // const totalCompra = products.reduce ((acumulador,product)=> acumulador + product.price, 0);
