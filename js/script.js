@@ -5,12 +5,12 @@
 let edad = 15;
 let login = "esta logueado";
 
-(edad >= 15 ) && (login == "esta logueado")? console.log ("puede inresar al sitio") : console.log ("No puede ingresar al sitio");
+(edad >= 15 ) && (login == "esta logueado")? console.log ("puede ingresar al sitio") : console.log ("No puede ingresar al sitio");
 
 
 
 //--------- guardar en localStorage------------//
-const elementosCarrito = JSON.parse (localStorage.getItem("products")) ||[];
+const elementosCarrito = JSON.parse (localStorage.getItem("products")) ?? [];
 
 
 // const totalCompra = products.reduce ((acumulador,product)=> acumulador + product.price, 0);
@@ -24,13 +24,35 @@ let products = elementosCarrito;
 let total = 0;
 
 
-function add(product,price) {
-    console.log (product, price);
-    products.push(product);
+
+
+
+// function add(product,price) {
+//     console.log (product, price);
+//     products.push(product);
+//     document.getElementById("checkout").innerHTML = products.length;
+//     console.log (products);
+
+// localStorage.setItem("totalCarrito", products.length);
+
+//------------ FETCH--------------//
+
+const buscarUnProducto = () => {
+    fetch ("productos.json")
+    .then ((response)=> response.json())
+    .then(informacion => {
+        informacion.forEach ((products) => {
+            console.log (products)
+        }
+        )
+    })
     document.getElementById("checkout").innerHTML = products.length;
     console.log (products);
 
-// localStorage.setItem("totalCarrito", products.length);
+}
+
+buscarUnProducto();
+
 
 localStorage.setItem ("products", JSON.stringify(products));
 
@@ -38,7 +60,6 @@ localStorage.setItem ("products", JSON.stringify(products));
     document.getElementById("checkout").innerHTML = `Pagar  $${total}`
 
 
-}
 
 
 function pagar() {
@@ -70,6 +91,7 @@ Swal.fire({
 
 
 // usuarioPagar.removeEventListener("click" , clickPagar);
+
 
 
 
